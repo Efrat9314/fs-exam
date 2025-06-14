@@ -1,10 +1,8 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config();
 
 
 const connectDB= async()=>{
-    await mongoose.connect(process.env.cloud_uri);
+    await mongoose.connect('mongodb+srv://efrat1093:vG%239NVmw-zsLcUA@cluster0.mssaa4h.mongodb.net/tasks_db?retryWrites=true&w=majority');
 }
 
 const database=mongoose.connection;
