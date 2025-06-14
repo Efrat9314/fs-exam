@@ -4,17 +4,17 @@ const TaskController = {
     getAll: async (req, res) => {
         try {
             const tasks = await TaskModel.find();
-            res.status(200).json( tasks );
+            res.status(200).json(tasks);
         }
         catch (e) {
             res.status(400).json({ error: e.massage })
         }
     },
     getById: async (req, res) => {
-        try {
+        try { 
             const { id } = req.params
             const task = await TaskModel.findById(id)
-            res.status(200).json( task );
+            res.status(200).json(task);
         }
         catch (e) {
             res.status(400).json({ error: e.massage })
@@ -24,7 +24,7 @@ const TaskController = {
         try {
             const { title, time } = req.body
             const newTask = await TaskModel.create({ title, time, isCompleted: false })
-            res.status(200).json( newTask );
+            res.status(200).json(newTask);
         }
         catch (e) {
             res.status(400).json({ error: e.massage })
@@ -33,9 +33,8 @@ const TaskController = {
     put: async (req, res) => {
         try {
             const { id } = req.params
-            console.log('tru to put',id,req.body)
             const updatedTask = await TaskModel.findByIdAndUpdate(id, req.body, { new: true })
-            res.status(200).json( updatedTask );
+            res.status(200).json(updatedTask);
         }
         catch (e) {
             res.status(400).json({ error: e.massage })
@@ -45,7 +44,7 @@ const TaskController = {
         try {
             const { id } = req.params
             const deletedTask = await TaskModel.findByIdAndDelete(id)
-            res.status(200).json( deletedTask );
+            res.status(200).json(deletedTask);
         }
         catch (e) {
             res.status(400).json({ error: e.massage })

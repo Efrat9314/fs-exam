@@ -40,7 +40,7 @@ export default function TaskForm() {
             alert('Please enter a task title');
             return;
         }
-        mode==='create'?addTask(task):updateTask(initialTask._id,task);
+        mode === 'create' ? addTask(task) : updateTask(initialTask._id, task);
         navigate('/tasks')
     };
 
