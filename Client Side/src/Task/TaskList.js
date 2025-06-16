@@ -25,7 +25,7 @@ export default function TaskList() {
                     <TaskItem key={task._id} task={task} toggleComplete={toggleComplete} />
                 ))}
             </ul>
-            <Link to="create" className='form-link'>Add Task</Link>
+            <Link to="tasks/create" className='form-link'>Add Task</Link>
         </div>
     );
 }

@@ -41,7 +41,7 @@ export default function TaskForm() {
             return;
         }
         mode === 'create' ? addTask(task) : updateTask(initialTask._id, task);
-        navigate('/tasks')
+        navigate('/')
     };
 
     return (

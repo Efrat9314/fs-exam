@@ -11,7 +11,7 @@ export default function TaskItem({ task, toggleComplete }) {
       <button onClick={() => toggleComplete(task._id)}>
         {task.isComplete ? 'Undo' : 'Complete'}
       </button>
-      <button onClick={() => { navigate('create', { state: { mode: 'edit', task } }); }}>
+      <button onClick={() => { navigate('tasks/create', { state: { mode: 'edit', task } }); }}>
         Edit
       </button>
     </li>
