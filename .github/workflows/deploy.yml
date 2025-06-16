@@ -17,8 +17,9 @@ jobs:
           username: ${{ secrets.EC2_USER || 'ubuntu' }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/fs-exam
+            cd "/home/ubuntu/fs-exam/Client Side"
             git pull
+            npm install
             npm run build
             sudo rm -rf /var/www/html/*
             sudo cp -r build/ /var/www/html
