@@ -62,7 +62,7 @@ export default function TaskForm() {
                     type='number'
                     name="time"
                     value={task.time}
-                    placeholder='Enter time estimatןםמ'
+                    placeholder='Enter time estimat'
                     onChange={handleChange}
                 />
             </label>
